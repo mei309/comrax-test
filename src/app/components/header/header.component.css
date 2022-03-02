@@ -1,0 +1,21 @@
+header {
+  background-color: lightblue;
+  height: 80px;
+  position:relative;
+}
+
+header h1 {
+  margin-top: 0%;
+  padding: 10px;
+  display: inline-block;
+}
+
+header span {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+}
+
+.search-input {
+  width: 150px;
+}

@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+  overflow: auto;
+  min-height: 97vh;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+}
+
+.center {
+  text-align: center;
+}

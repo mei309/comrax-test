@@ -1,0 +1,21 @@
+<h1>{{category}}</h1>
+<div class="movies-arrows">
+  <div class="left-arrow">
+    <fa-icon size="4x" [icon]="faArrowLeft" class="fa-arrow" *ngIf="list.isOverflow" [class.disable]="!list.canScrollStart" (click)="list.scroll(-1)"></fa-icon>
+  </div>
+  <div class="movie-row" appScrollable #list="appScrollable" [scrollUnit]="450">
+
+    <ng-container *ngFor="let movie of movies" appScrollable>
+      <div class="card">
+        <img [src]="movie.poster" alt="Avatar" style="width:100%" loading="lazy">
+        <h4><b>{{movie.title}}</b></h4>
+        <p>{{movie.released_on | date}}</p>
+      </div>
+    </ng-container>
+
+  </div>
+  <div class="right-arrow">
+    <fa-icon size="4x" [icon]="faArrowRight" class="fa-arrow" *ngIf="list.isOverflow"  [class.disable]="!list.canScrollEnd" (click)="list.scroll(1)"></fa-icon>
+  </div>
+</div>
+
