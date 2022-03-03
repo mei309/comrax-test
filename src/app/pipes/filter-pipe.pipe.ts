@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Movie } from '../movie';
 
+// for the category. i prefer a pipe because it dosent run on change
 @Pipe({
   name: 'filterPipe'
 })

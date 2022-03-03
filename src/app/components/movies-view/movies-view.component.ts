@@ -21,8 +21,7 @@ export class MoviesViewComponent implements OnInit {
     this.subscription = this.searchListener.searchSubscribe().subscribe(serc => {
       //its http therefor we dont need to unsubscribe (promise)
       this.moviesService.getMovies(serc).subscribe((movieList: any) => {
-        console.log(movieList.movies);
-
+        // to find all the genres types
         this.unique = [...new Set((movieList.movies.map((a: Movie) => a.genres)).flat(1))] as string[];
         this.moviesRow = movieList.movies;
       });

@@ -1,5 +1,7 @@
 import { Directive, ElementRef, HostListener, Input } from "@angular/core";
 
+
+// just to make nice scrolling that will show only when needed
 @Directive({
   selector: "[appScrollable]",
   exportAs: "appScrollable"

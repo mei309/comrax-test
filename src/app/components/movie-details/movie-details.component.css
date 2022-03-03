@@ -1,0 +1,29 @@
+img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+
+.details-div {
+  width: 50%;
+  float:right;
+}
+
+.details-div>* {
+  padding-left: 20px;
+}
+
+
+.rating {
+  font-size: 48px;
+  color: orange;
+  display: inline-block;
+  overflow: hidden;
+}
+.rating::before {
+  content: "★★★★★";
+}
+
+.rating-parent {
+  width:180px;
+  display: inline-block;
+}

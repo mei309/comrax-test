@@ -1,0 +1,19 @@
+<div *ngIf="movie">
+  <h1 class="center"><b>{{movie.title}}</b></h1>
+  <div style="width: 50%; float:left">
+    <img [src]="movie.poster" alt="Avatar" loading="lazy">
+  </div>
+
+  <div class="details-div">
+    <h3>Director: {{movie.director}}</h3>
+    <!-- just a nice rating stars -->
+    <div #container class="rating-parent">
+      <div [ngStyle]="{'width': (container.clientWidth * (movie.imdb_rating/10)) + 'px'}" class="rating"></div>
+    </div>
+    <h4>Cast: {{movie.cast | addSpace}}</h4>
+    <h5>Genres: {{movie.genres | addSpace}}</h5>
+    <p>Released date: {{movie.released_on | date}}</p>
+    <p>Length: {{movie.length}}</p>
+    <p>Overview: {{movie.overview}}</p>
+  </div>
+</div>
